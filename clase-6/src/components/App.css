@@ -19,6 +19,21 @@
     margin-top: 10px;
 }
 
+.cardCart {
+    max-width: 640px;
+}
+
+.cantCarrito {
+    position: relative;
+    left: 15%;
+}
+
+.cartContainer {
+    margin-top: 3%;
+
+}
+
+
 .divForm {
     margin-top: 20px;
 }

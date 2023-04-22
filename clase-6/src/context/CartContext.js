@@ -29,12 +29,10 @@ export const CarritoProvider = (props) => { //Forma de proveer el contexto en mi
                 ...item,
                 quantity: quantity //Si agrego directamente el parametro se queda con el mismo nombre
             }
-            /*
-            //Genero un aux que es igual al carrito para poder hacer el push
+            /*//Genero un aux que es igual al carrito para poder hacer el push
             const aux = carrito
             aux.push(newItem)
-            setCarrito(aux)
-            */
+            setCarrito(aux)*/
             setCarrito([...carrito, newItem]) //Genero una copia del carrito + el nuevo producto
         }
     }
@@ -54,7 +52,7 @@ export const CarritoProvider = (props) => { //Forma de proveer el contexto en mi
 
     const getItemQuantity = () => {
         //Devuelvo la cantidad de productos en mi carrito
-        return carrito.reduce((acum, prod) => acum += prod.cant, 0)
+        return carrito.reduce((acum, prod) => acum += prod.quantity, 0)
     }
 
     const totalPrice = () => {
